@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import udea.edu.co.barsocial.R;
+import udea.edu.co.barsocial.controller.DataController;
 
 public class Lugares extends ActionBarActivity {
 
@@ -17,6 +18,7 @@ public class Lugares extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lugares);
         botons();
+        DataController.createLugar();
     }
 
     @Override

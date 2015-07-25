@@ -1,4 +1,4 @@
-package modelo;
+package udea.edu.co.barsocial.modelo;
 
 import com.parse.ParseClassName;
 import com.parse.ParseGeoPoint;
@@ -9,58 +9,70 @@ import java.util.Date;
 /**
  * Created by JD on 23/07/2015.
  */
-@ParseClassName("Evento")
-public class Evento extends ParseObject {
+@ParseClassName("EventoDao")
+public class EventoDao extends ParseObject {
 
-    String ID,name,description,lugar;
+    String ID,name,description, IDlugar;
     ParseGeoPoint location;
     Date date;
 
     public Date getDate() {
-        return (Date)get("Date");
+        this.date=(Date)get("Date");
+        return date;
     }
 
     public void setDate(Date date) {
+        this.date=date;
         put("Date", date);
     }
 
     public String getDescription() {
-        return getString("Description");
+        this.description=getString("Description");
+        return description;
     }
 
     public void setDescription(String description) {
+        this.description=description;
         put("Description", description);
     }
 
     public String getID() {
-        return getString("ID");
+        ID=getString("ID");
+        return ID;
     }
 
     public void setID(String ID) {
+        this.ID=ID;
         put("ID",ID);
     }
 
     public ParseGeoPoint getLocation() {
-        return (ParseGeoPoint)get("Location");
+        location=(ParseGeoPoint)get("Location");
+        return location;
     }
 
     public void setLocation(ParseGeoPoint location) {
+        this.location=location;
         put("Location", location);
     }
 
-    public String getLugar() {
-        return getString("Lugar");
+    public String getIDlugar() {
+        IDlugar =getString("LugarDao");
+        return IDlugar;
     }
 
-    public void setLugar(String lugar) {
-        put("Lugar", lugar);
+    public void setIDlugar(String IDlugar) {
+        this.IDlugar = IDlugar;
+        put("LugarDao", IDlugar);
     }
 
     public String getName() {
-        return getString("Name");
+        name=getString("Name");
+        return name;
     }
 
     public void setName(String name) {
+        this.name=name;
         put("Name", name);
     }
 

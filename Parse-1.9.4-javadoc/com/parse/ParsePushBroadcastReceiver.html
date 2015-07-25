@@ -488,7 +488,7 @@ extends <a href="http://developer.android.com/reference/android/content/Broadcas
 <h4>onPushOpen</h4>
 <pre>protected&nbsp;void&nbsp;onPushOpen(<a href="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
               <a href="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</a>&nbsp;intent)</pre>
-<div class="block">Called when the push notification is opened by the user. Sends analytics info back to Parse
+<div class="block">Called when the push notification is opened by the user. Sends analytics infoDao back to Parse
  that the application was opened from this push notification. By default, this will navigate
  to the <a href="http://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app"><code>Activity</code></a> returned by <a href="../../com/parse/ParsePushBroadcastReceiver.html#getActivity(android.content.Context,%20android.content.Intent)"><code>ParsePushBroadcastReceiver.getActivity(Context, Intent)</code></a>. If the push contains
  a 'uri' parameter, an Intent is fired to view that URI with the Activity returned by
